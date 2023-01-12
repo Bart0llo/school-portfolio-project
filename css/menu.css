@@ -28,10 +28,14 @@
   background: var(--primary);
   width: 200px;
   padding: 5px 0;
-  border-radius: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--bg-shades);
 }
 .menu ul li:hover {
   transform: scale(0.9);
+}
+.menu ul li.active {
+  background-color: var(--bg-shades);
 }
 
 @media only screen and (max-width: 1225px) {
