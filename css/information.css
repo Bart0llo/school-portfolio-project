@@ -58,11 +58,17 @@ main {
   margin: 20px;
 }
 
-
 /* Buttons */
 
-/* Github button */ 
+/* Github and Bart0llo.dev buttons */
 .card .github {
+  background-color: #181717;
+}
+.card .website {
+  background-color: #56638a;
+}
+.card .github,
+.card .website {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -71,15 +77,16 @@ main {
   font-weight: 600;
   outline: none;
   border: none;
-  background-color: #181717;
   color: var(--font);
-  width: 200px;
+  min-width: 200px;
+  padding: 0 10px;
   height: 50px;
   font-size: 32px;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
 }
-.card .github:hover {
+.card .github:hover,
+.card .website:hover {
   transform: scale(1.05);
 }
 
