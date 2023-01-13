@@ -2,25 +2,27 @@ main {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 .container {
-  padding: 0 10px;
   border-radius: 40px;
   width: 80vw;
-  height: 90vh;
+  padding: 10px;
   box-shadow: 5px 5px 10px var(--bg-shades), -5px -5px 10px var(--bg-shades);
 
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+/* Header */
 .container .header {
   border-bottom: 3px solid var(--primary);
   font-size: 40px;
   padding: 5px;
   width: 100%;
 }
+
+/* Cards */
 .cards {
   margin-top: 65px;
   display: flex;
@@ -34,9 +36,18 @@ main {
   height: 200px;
   border-radius: 40px;
   box-shadow: 5px 5px 10px var(--bg-shades);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+.card p {
+  font-size: 38px;
+  margin: 20px;
+}
+
 .donateArea {
-  margin-top: 60px;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +57,33 @@ main {
   font-size: 55px;
   margin: 20px;
 }
+
+
+/* Buttons */
+
+/* Github button */ 
+.card .github {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  background-color: #181717;
+  color: var(--font);
+  width: 200px;
+  height: 50px;
+  font-size: 32px;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.card .github:hover {
+  transform: scale(1.05);
+}
+
+/* Donate button */
 .donate {
   cursor: pointer;
   display: flex;
