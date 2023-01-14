@@ -1,0 +1,22 @@
+main {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 40px 0;
+}
+.container {
+  border-radius: 40px;
+  width: 80vw;
+  padding: 10px;
+  box-shadow: 5px 5px 10px var(--bg-shades), -5px -5px 10px var(--bg-shades);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* Header */
+.container .header {
+    border-bottom: 3px solid var(--primary);
+    font-size: 40px;
+    padding: 5px;
+    width: 100%;
+  }
