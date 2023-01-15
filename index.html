@@ -21,8 +21,15 @@
     <main>
       <!-- Menu -->
       <div class="menu animate__animated animate__fadeInLeft animate__slow">
-        <h1>Menu</h1>
-        <ul>
+        <div class="menu_header">
+          <h1>Menu</h1>
+          <a href="javascript:void(0)" class="hamburger" onclick="Menu()">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </a>
+        </div>
+        <ul id="links">
           <li class="active"><a href="./index.html">Strona główna</a></li>
           <li><a href="">Galeria</a></li>
           <li><a href="">Sociale</a></li>
@@ -47,5 +54,7 @@
         </div>
       </div>
     </main>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
