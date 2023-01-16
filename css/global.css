@@ -26,6 +26,3 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary);
 }
-.animate__animated{
-  z-index: 500;
-}
