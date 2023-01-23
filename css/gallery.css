@@ -46,7 +46,7 @@ main {
 @media only screen and (max-width: 1440px) {
   .gallery {
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(5, 300px);
+    grid-template-rows: repeat(8, 300px);
   }
 }
 @media only screen and (max-width: 1225px) {

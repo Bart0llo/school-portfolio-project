@@ -15,8 +15,208 @@ main {
 }
 /* Header */
 .container .header {
-    border-bottom: 3px solid var(--primary);
-    font-size: 40px;
-    padding: 5px;
-    width: 100%;
+  border-bottom: 3px solid var(--primary);
+  font-size: 40px;
+  padding: 5px;
+  width: 100%;
+}
+form {
+  margin-top: 50px;
+  font-size: 36px;
+}
+/* Form Name & Surname section */
+.names {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+}
+.names div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.names label {
+  position: absolute;
+  left: 15px;
+  pointer-events: none;
+}
+.names label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.names input,
+.email input {
+  /* And email form */
+  background: var(--primary);
+  color: var(--font);
+  box-shadow: 5px 5px 10px var(--bg-shades);
+  border-radius: 10px;
+  padding: 10px;
+  border: 0;
+  width: 350px;
+  height: 30px;
+  font-size: 80%;
+}
+.names input:focus,
+.names input:valid {
+  outline: 0;
+}
+.names input:focus + label span,
+.names input:valid + label span {
+  transform: translateY(-50px);
+}
+
+/* Form email */
+.email {
+  position: relative;
+  margin: 25px 0;
+}
+.email label {
+  position: absolute;
+  pointer-events: none;
+  top: 5px;
+  left: 210px;
+}
+.email label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.email input:focus,
+.email input:valid {
+  outline: 0;
+}
+.email input:focus + label span,
+.email input:valid + label span {
+  transform: translateX(-95px);
+}
+
+/* Content form */
+.content {
+  position: relative;
+}
+.content textarea {
+  resize: none;
+  padding: 10px;
+  font-size: 26px;
+  background: var(--primary);
+  color: var(--font);
+  border: 0;
+  text-align: center;
+  box-shadow: 5px 5px 10px var(--bg-shades);
+  border-radius: 10px;
+  transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.content label {
+  position: absolute;
+  top: 5px;
+  left: 300px;
+  pointer-events: none;
+}
+.content label span {
+  display: inline-block;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.content textarea:focus,
+.content textarea:valid {
+  outline: 0;
+  margin-top: 50px;
+}
+
+.content textarea:focus + label span,
+.content textarea:valid + label span {
+  transform: translateY(-10px);
+}
+
+/* Buttons */
+.buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.buttons input {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid var(--bg-shades);
+  background: var(--primary);
+  color: var(--font);
+  box-shadow: 5px 5px 10px var(--bg-shades);
+  font-size: 100%;
+  font-family: "Amatic SC", Arial, Helvetica, sans-serif;
+  width: 170px;
+  height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+.buttons input:hover {
+  transform: scale(1.08);
+  background-color: var(--bg-shades);
+}
+
+@media only screen and (max-width: 1225px) {
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+}
+@media only screen and (max-width: 928px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  /* Name and surname */
+  .names {
+    flex-direction: column;
+  }
+  .names input,
+  .email input,
+  .content textarea {
+    text-align: center;
+    width: 70vw;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .names label,
+  .email label,
+  .content label {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .content label {
+    font-size: 26px;
+  }
+  .names input:focus,
+  .names input:valid,
+  .email input:focus,
+  .email input:valid {
+    margin-top: 40px;
+  }
+  .names input:focus + label span,
+  .names input:valid + label span,
+  .email input:focus + label span,
+  .email input:valid + label span {
+    transform: translateY(-10px);
+  }
+  /* Email */
+  .email {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 446px) {
+  .buttons {
+    margin: 10px;
+    gap: 10px;
+    flex-direction: column;
+  }
+}
